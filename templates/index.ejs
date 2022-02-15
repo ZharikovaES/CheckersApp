@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head'); %>
+<body>
+    <div class="body__wrapper">
+        <div class="background">
+            <ul class="background__circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="content show">
+            <header class="header">
+                <div class="header__wrapper">
+                    <%- include('./partials/logo-header'); %>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <form method="post" action="/" id="username-form" class="username-form">
+                        <label for="username-input">Введите свое имя</label>
+                        <input type="text" name="username" id="username-input" maxlength="25" autocomplete="off" class="username-form__input" title="Имя не может сосоять только из пробедов"  required>
+                        <button type="submit" id="play-btn" class="username-form__btn">Играть 🎲</button>    
+                    </form>
+                </div>
+            </main>    
+        </div>    
+    </div>
+    <script type="module" src="/js/Cell.js"></script>
+    <script type="module" src="/js/Player.js"></script>
+    <script type="module" src="/js/Checker.js"></script>
+    <script type="module" src="/js/Game.js"></script>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

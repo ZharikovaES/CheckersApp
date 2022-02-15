@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head'); %>
+<body>
+    <div class="body__wrapper">
+        <div class="background">
+            <ul class="background__circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="loader show">
+            <div class="loadingio-spinner-spinner-qq80ezq6rm"><div class="ldio-zh70tcesa9">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div></div>
+        </div>
+        <div class="content">
+            <header class="header">
+                <nav class="header__nav">
+                    <div class="header__nav-control">
+                        <a href="/" class="header__link link-home">На главную</a>
+                    </div>
+                    <%- include('./partials/logo-header'); %>
+                    <div class=""></div>
+                </nav>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="content-link-form__wrapper">
+                        <form id="link-form" class="link-form">
+                            <p>Для того, чтобы пригласить пользователя в игру, отправьте ему данную ссылку</p>
+                            <div class="link-form__control">
+                                <input class="link-form__input" type="text" name="link" id="link" value=<%= link %>>
+                                <button type="button" class="link-form__btn link-form__btn-copy">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+                            <p>Ожидайте, когда Ваш соперник перейдет по ссылке. Не закрывайте данную страницу</p>
+                        </form>    
+                    </div>
+                    <div class="content-username-form__wrapper">
+                        <form id="username-form" class="username-form">
+                            <label for="username-input">Введите свое имя</label>
+                            <input type="text" name="username" id="username-input" maxlength="25" autocomplete="off" class="username-form__input" required>
+                            <button type="button" id="play-btn" class="username-form__btn">Играть 🎲</button>    
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="game-container">
+            <aside class="game-container__info">
+                <header class="header">
+                    <nav class="header__nav">
+                        <div class="header__nav-control">
+                            <a href="/" class="header__link link-home">На главную</a>
+                        </div>
+                        <%- include('./partials/logo-header'); %>
+                        <div class=""></div>
+                    </nav>
+                </header>
+                <div class="game-container__info-active-player info-active-player">
+                    <div class="info-active-player__inner">
+                        <h4 class="info-active-player__subtitle">Сейчас ходит: </h4>
+                        <span class="info-active-player__name"> - </span>
+                    </div>    
+                </div>
+            </aside>
+        </div>
+        <div class="pop-up">
+            <div class="pop-up__inner">
+                <div class="pop-up__head">
+                </div>
+                <p class="pop-up__text"></p>
+                <div class="pop-up__control control-pop-up">
+                    <a href="/" class="control-pop-up__link link-home">На главную</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/js/Cell.js"></script>
+    <script type="module" src="/js/Player.js"></script>
+    <script type="module" src="/js/Checker.js"></script>
+    <script type="module" src="/js/Game.js"></script>
+    <script type="module" src="/js/main.js"></script>
+
+</body>
+</html>
